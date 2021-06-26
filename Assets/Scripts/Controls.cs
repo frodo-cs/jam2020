@@ -4,15 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Controls : MonoBehaviour {
+    [SerializeField] AudioSource source;
     public Slider bloodLeft;
     public Slider bloodToGive;
     int n;
 
-    public void OnButtonPress() {
+    public void OnButtonPress() { 
         n++;
         Debug.Log("Button clicked " + n + " times.");
     }
 
-
+    public void PlaySound() {
+        source.Play();
+    }
 
 }
