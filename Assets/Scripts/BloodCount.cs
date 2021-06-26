@@ -21,7 +21,7 @@ public class BloodCount : MonoBehaviour {
 
     void IncreaseBloodCount() {
         if(currentBlood < maxBlood) {
-            currentBlood++;
+            currentBlood+=5;
             text.text = $"{currentBlood}";
             slider.value = currentBlood;
             source.Play();
