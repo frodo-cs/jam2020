@@ -10,6 +10,7 @@
 "Game Audio - UI SFX" by GameAudio of Freesound.org
 "bubble sound" by Ranner of Freesound.org
 "1kHz Loud" by shanedk of Freesound.org
+"Short Loop" by Mawnz of Newgrounds.com
 
 ## Fonts
 "Dogica" by Roberto Mocci
