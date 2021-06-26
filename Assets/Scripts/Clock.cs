@@ -5,7 +5,7 @@ public class Clock : MonoBehaviour {
 
     [SerializeField] TextMeshProUGUI textTime;
     [SerializeField] int maxTime;
-    float time;
+    [HideInInspector] public float time;
 
     private void Start() {
         time = maxTime;
