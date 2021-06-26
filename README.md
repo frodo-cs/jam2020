@@ -10,3 +10,7 @@
 "Game Audio - UI SFX" by GameAudio of Freesound.org
 "bubble sound" by Ranner of Freesound.org
 "1kHz Loud" by shanedk of Freesound.org
+
+## Fonts
+"Dogica" by Roberto Mocci
+"Rainy Hearts" by Camellina

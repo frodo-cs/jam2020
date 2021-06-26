@@ -1,13 +1,12 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class StoryController : MonoBehaviour
 {
     public string story;
-    public Text text;
+    public TextMeshProUGUI text;
 
     public string scene;
     // Start is called before the first frame update
@@ -34,4 +33,7 @@ public class StoryController : MonoBehaviour
         }
     }
 
+    public void LoadScene() {
+        SceneManager.LoadScene(scene);
+    }
 }
