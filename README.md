@@ -5,4 +5,5 @@
 
 ## Sounds
 
-Bubble sound - https://freesound.org/people/Glaneur%20de%20sons/
+"bubble (1).wav" by Glaneur de sons of Freesound.org
+"Heartbeat, Regular, Single, 01-01, LOOP.wav" by InspectorJ of Freesound.org

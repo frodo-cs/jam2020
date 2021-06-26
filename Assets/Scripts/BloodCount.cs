@@ -7,6 +7,7 @@ public class BloodCount : MonoBehaviour {
     [SerializeField] float rate = 5;
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] Slider slider;
+    [SerializeField] AudioSource source;
 
     public int maxBlood = 100;
     float currentBlood = 0;
@@ -23,6 +24,7 @@ public class BloodCount : MonoBehaviour {
             currentBlood++;
             text.text = $"{currentBlood}";
             slider.value = currentBlood;
+            source.Play();
         }     
     }
 }
