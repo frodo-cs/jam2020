@@ -7,17 +7,18 @@ public class SliderController : MonoBehaviour
 {
     public Text sliderValue;
     public Slider slider;
-    int value = 0;
+    int currentValue;
 
     // Start is called before the first frame update
     public void OnSliderChanged(float value)
     {
-        sliderValue.text = slider.value.ToString();
+        sliderValue.text = value.ToString();
+        Debug.Log(value);
     }
 
     public void UpdateBlood()
     {
-        value++;
-        slider.value = value;
+        currentValue++;
+        slider.value = currentValue;
     }
 }
