@@ -8,11 +8,18 @@ public class GameEvents : MonoBehaviour {
     }
 
     public event Action OnGameWon;
+    public event Action OnOrganDied;
     public event Action OnGameLost;
 
     public void GameWonTrigger() {
         if (OnGameWon != null) {
             OnGameWon.Invoke();
+        }
+    }
+
+    public void OrganDiedTrigger() {
+        if (OnOrganDied != null) {
+            OnOrganDied.Invoke();
         }
     }
 

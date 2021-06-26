@@ -9,8 +9,8 @@ public class Organ : MonoBehaviour {
     public int maxHealth = 100;
     public int minHealth = 0;
 
-    [Range(0.0f, 0.1f)]
-    public float deterRate = 0.01f;
+    [Range(0.01f, 0.02f)]
+    public float decayRate = 0.01f;
 
     [HideInInspector] public float Health { get; set; }
     [HideInInspector] public bool Death { get; set; }
@@ -23,10 +23,11 @@ public class Organ : MonoBehaviour {
 
     private void Update() {
         if (!Death) {
-            Health -= deterRate;
+            Health -= decayRate;
             if (Health <= 0) {
                 image.sprite = sprites[3];
                 Death = true;
+                GameEvents.current.OrganDiedTrigger();
             } else if (Health < maxHealth / 3) {
                 image.sprite = sprites[2];
             } else if (Health < 2 * maxHealth / 3) {

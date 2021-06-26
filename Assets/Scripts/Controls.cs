@@ -14,8 +14,9 @@ public class Controls : MonoBehaviour {
         Debug.Log("Button clicked " + n + " times.");
     }
 
-    public void PlaySound() {
+    public void GeneralButton() {
         source.Play();
+        bloodToGive.value = bloodToGive.maxValue;
     }
 
 }
