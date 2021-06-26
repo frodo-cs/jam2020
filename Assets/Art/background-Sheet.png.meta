@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: a8609078ff5fa684ba492cb8009b4021
+guid: 4e42989f18dc8dc408d9a2aa794a74cb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3328322039917956821
-    second: gui_0
+      213: -442370977932292858
+    second: background-Sheet_0
   - first:
-      213: -2150363651035576006
-    second: gui_1
+      213: -4038442191735245509
+    second: background-Sheet_1
   - first:
-      213: -8567643912832686301
-    second: gui_2
+      213: 6088161492652563693
+    second: background-Sheet_2
+  - first:
+      213: 6302141378162290416
+    second: background-Sheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -73,7 +76,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -85,7 +88,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,7 +100,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +111,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gui_0
+      name: background-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -122,14 +125,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dec967d243903e20800000000000000
-      internalID: 3328322039917956821
+      spriteID: 60d476970f16cd9f0800000000000000
+      internalID: -442370977932292858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gui_1
+      name: background-Sheet_1
       rect:
         serializedVersion: 2
         x: 512
@@ -143,14 +146,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a39cc1a07af5822e0800000000000000
-      internalID: -2150363651035576006
+      spriteID: b35bba3293294f7c0800000000000000
+      internalID: -4038442191735245509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gui_2
+      name: background-Sheet_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -164,8 +167,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 327e19d214d991980800000000000000
-      internalID: -8567643912832686301
+      spriteID: dec94c00f9e7d7450800000000000000
+      internalID: 6088161492652563693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe67a97134b57750800000000000000
+      internalID: 6302141378162290416
       vertices: []
       indices: 
       edges: []
