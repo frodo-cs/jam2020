@@ -22,7 +22,7 @@ public class Organ : MonoBehaviour {
     }
 
     private void Update() {
-        if (!Death) {
+        if (!Death && !PauseMenu.GamePaused) {
             Health -= decayRate;
             if (Health <= 0) {
                 image.sprite = sprites[3];

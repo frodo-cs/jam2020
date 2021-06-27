@@ -20,7 +20,7 @@ public class BloodCount : MonoBehaviour {
     }
 
     void IncreaseBloodCount() {
-        if(currentBlood < maxBlood) {
+        if(currentBlood < maxBlood && !PauseMenu.GamePaused) {
             currentBlood+=5;
             text.text = $"{currentBlood}";
             slider.value = currentBlood;
