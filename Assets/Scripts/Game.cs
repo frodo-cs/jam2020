@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class Game : MonoBehaviour {
 
     [SerializeField] int minDeathOrgans = 2;
-    [SerializeField] AudioSource source;
 
     private void Start() {
         Time.timeScale = 1f;
@@ -26,7 +25,6 @@ public class Game : MonoBehaviour {
     }
 
     private void OrganDied(object sender, KeyValuePair<string, string> e) {
-        source.Play();
         if (CheckIfDead()) {
             GameEvents.current.GameLostTrigger();
         }

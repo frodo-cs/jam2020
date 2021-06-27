@@ -7,6 +7,8 @@ public class Organ : MonoBehaviour {
 
     [SerializeField] Image image;
     [SerializeField] Sprite[] sprites;
+    [SerializeField] AudioClip clip;
+    [SerializeField] AudioSource source;
 
     public string organName;
     public string organId;
@@ -39,9 +41,10 @@ public class Organ : MonoBehaviour {
     private void Update() {
         if (!Death && !PauseMenu.GamePaused) {
             Health -= decayRate;
-            if (Health <= 0) {
+            if (Health <= 0.1) {
                 image.sprite = sprites[3];
                 Death = true;
+                source.PlayOneShot(clip);
                 OnOrganDied(new KeyValuePair<string, string>(organId, organName));
             } else if (Health < maxHealth / 3 && !dying) {
                 image.sprite = sprites[2];
