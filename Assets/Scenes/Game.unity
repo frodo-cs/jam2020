@@ -1546,8 +1546,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: RESUME
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 489bcbfbfe255f24fb94be7f6d4506a3, type: 2}
-  m_sharedMaterial: {fileID: -357494534021933296, guid: 489bcbfbfe255f24fb94be7f6d4506a3,
+  m_fontAsset: {fileID: 11400000, guid: b3c44a4d3d07c7b409ea8460d361365c, type: 2}
+  m_sharedMaterial: {fileID: -1081600970646074426, guid: b3c44a4d3d07c7b409ea8460d361365c,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1572,8 +1572,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2452,8 +2452,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 489bcbfbfe255f24fb94be7f6d4506a3, type: 2}
-  m_sharedMaterial: {fileID: -357494534021933296, guid: 489bcbfbfe255f24fb94be7f6d4506a3,
+  m_fontAsset: {fileID: 11400000, guid: b3c44a4d3d07c7b409ea8460d361365c, type: 2}
+  m_sharedMaterial: {fileID: -1081600970646074426, guid: b3c44a4d3d07c7b409ea8460d361365c,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3951,8 +3951,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: MENU
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 489bcbfbfe255f24fb94be7f6d4506a3, type: 2}
-  m_sharedMaterial: {fileID: -357494534021933296, guid: 489bcbfbfe255f24fb94be7f6d4506a3,
+  m_fontAsset: {fileID: 11400000, guid: b3c44a4d3d07c7b409ea8460d361365c, type: 2}
+  m_sharedMaterial: {fileID: -1081600970646074426, guid: b3c44a4d3d07c7b409ea8460d361365c,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3977,8 +3977,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4867,8 +4867,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -168.7, y: 117.9}
-  m_SizeDelta: {x: 95.437775, y: 12.542343}
+  m_AnchoredPosition: {x: -158.53, y: 116.53}
+  m_SizeDelta: {x: 115.781555, y: 15.291515}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1678389948
 MonoBehaviour:
@@ -4891,8 +4891,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Organ signals
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 489bcbfbfe255f24fb94be7f6d4506a3, type: 2}
-  m_sharedMaterial: {fileID: -357494534021933296, guid: 489bcbfbfe255f24fb94be7f6d4506a3,
+  m_fontAsset: {fileID: 11400000, guid: b3c44a4d3d07c7b409ea8460d361365c, type: 2}
+  m_sharedMaterial: {fileID: -1081600970646074426, guid: b3c44a4d3d07c7b409ea8460d361365c,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
