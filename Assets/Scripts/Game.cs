@@ -7,7 +7,9 @@ public class Game : MonoBehaviour {
     [SerializeField] List<Organ> organs; // 9
     [SerializeField] int minDeathOrgans = 2;
     [SerializeField] AudioSource source;
+
     enum O { BLADDER, KIDNEY_1, KIDNEY_2, LUNG_1, LUNG_2, HEART, BRAIN, STOMACH, LIVER }
+
 
     private void Start() {
         GameEvents.current.OnOrganDied += OrganDied;

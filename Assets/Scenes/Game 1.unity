@@ -1657,6 +1657,7 @@ GameObject:
   - component: {fileID: 414049952}
   - component: {fileID: 414049954}
   - component: {fileID: 414049953}
+  - component: {fileID: 414049955}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -1835,6 +1836,28 @@ MonoBehaviour:
   clock: {fileID: 1703244067}
   exponential: 1.5
   rate: 1
+--- !u!114 &414049955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414049949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906fc98498e43a740b5ebbb577ca6d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  o:
+  - {fileID: 675230096}
+  - {fileID: 833620956}
+  - {fileID: 743730162}
+  - {fileID: 1456187833}
+  - {fileID: 2042365497}
+  - {fileID: 357158855}
+  - {fileID: 1620005423}
+  - {fileID: 2006337928}
+  - {fileID: 152634465}
 --- !u!1 &421384834
 GameObject:
   m_ObjectHideFlags: 0

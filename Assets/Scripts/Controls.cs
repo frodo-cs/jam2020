@@ -9,8 +9,6 @@ public class Controls : MonoBehaviour {
     public Slider bloodToGive;
     int n;
 
-
-
     public void OnButtonPress() { 
         n++;
         Debug.Log("Button clicked " + n + " times.");
