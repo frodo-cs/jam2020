@@ -8,6 +8,7 @@ public class BloodCount : MonoBehaviour {
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] Slider slider;
     [SerializeField] AudioSource source;
+    [SerializeField] int step = 5;
 
     public int maxBlood = 100;
 
@@ -18,14 +19,13 @@ public class BloodCount : MonoBehaviour {
     }
 
     void IncreaseBloodCount() {
-        if(slider.value < maxBlood && !PauseMenu.GamePaused) {
-            slider.value+=5;
+        if (slider.value < maxBlood && !PauseMenu.GamePaused) {
+            slider.value += step;
             source.Play();
-        }     
+        }
     }
 
-    public void FixedUpdate()
-    {
+    public void FixedUpdate() {
         text.text = $"{slider.value}";
     }
 }
