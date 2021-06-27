@@ -13,8 +13,6 @@ public class sliderOrganController : MonoBehaviour
     [SerializeField] Sprite sprite;
 
 
-
-
     [HideInInspector] public float HealthOrgan { get; set; }
 
     private void Start()

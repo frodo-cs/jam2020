@@ -10,21 +10,22 @@ public class BloodCount : MonoBehaviour {
     [SerializeField] AudioSource source;
 
     public int maxBlood = 100;
-    float currentBlood = 0;
 
     private void Start() {
         slider.maxValue = maxBlood;
-        slider.value = currentBlood;
-        text.text = $"{currentBlood}";
+        slider.value = 15;
         InvokeRepeating("IncreaseBloodCount", rate, rate);
     }
 
     void IncreaseBloodCount() {
-        if(currentBlood < maxBlood && !PauseMenu.GamePaused) {
-            currentBlood+=5;
-            text.text = $"{currentBlood}";
-            slider.value = currentBlood;
+        if(slider.value < maxBlood && !PauseMenu.GamePaused) {
+            slider.value+=5;
             source.Play();
         }     
+    }
+
+    public void FixedUpdate()
+    {
+        text.text = $"{slider.value}";
     }
 }
