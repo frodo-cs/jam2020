@@ -1,21 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour
-{
+public class HealthBar : MonoBehaviour {
+
     [SerializeField] Slider slider;
+    List<Organ> organs;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    void Start() {
+        organs = new List<Organ>(Organs.organs.Values);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Update() {
+        slider.value = GetAverage() / GetDeathOrgans();
     }
+
+    float GetAverage() {
+        return organs.Sum(x => x.Health) / organs.Count;
+    }
+
+    int GetDeathOrgans() {
+        return organs.Where(x => x.Death).ToList().Count;
+    }
+
 }

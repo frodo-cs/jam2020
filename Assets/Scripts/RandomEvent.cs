@@ -22,6 +22,7 @@ public class RandomEvent : MonoBehaviour {
         int n = Random.Range(0, GetNumber());
         int min = (int)(this.min + (clock.maxTime - clock.time));
         if (n > min) {
+            Debug.LogError("evento");
             list[Random.Range(0, Organs.organs.Values.Count)].IncrementDecayRate();
         }
     }

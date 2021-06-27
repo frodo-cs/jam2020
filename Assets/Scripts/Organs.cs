@@ -6,7 +6,7 @@ public class Organs : MonoBehaviour {
 
     public static Dictionary<string, Organ> organs;
 
-    private void Start() {
+    private void Awake() {
         organs = new Dictionary<string, Organ>();
         organs.Add("bladder", o[0]);
         organs.Add("kidney1", o[1]);
@@ -16,5 +16,6 @@ public class Organs : MonoBehaviour {
         organs.Add("heart", o[5]);
         organs.Add("brain", o[6]);
         organs.Add("stomach", o[7]);
+        organs.Add("liver", o[8]);
     }
 }
