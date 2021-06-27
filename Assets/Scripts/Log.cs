@@ -5,15 +5,18 @@ using UnityEngine;
 public class Log : MonoBehaviour {
 
     [SerializeField] TextMeshProUGUI text;
-    string[] sentences = { "", "" };
+    List<string> sentences;
+    int count = 0;
 
     void Start() {
+        sentences = new List<string>();
         Organ.OrganDying += OrganDyingText;
     }
 
     private void OrganDyingText(object sender, string name) {
-        SetSentence($"We are losing connection to {name}");    
+        SetSentence($"{count} We are losing connection to {name}");    
         text.text = string.Join("\n", sentences);
+        count++;
     }
 
     private void UnitsSend(object sender, KeyValuePair<int, string> unit) {
@@ -22,12 +25,7 @@ public class Log : MonoBehaviour {
     }
 
     private void SetSentence(string sentece) {
-        if (string.Equals("", sentences[0])) {
-            sentences[0] = sentece;
-        } else {
-            sentences[0] = sentences[1];
-            sentences[1] = sentece;
-        }
+        sentences.Insert(0, sentece);    
     }
 
     void Update() {

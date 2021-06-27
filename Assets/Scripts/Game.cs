@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class Game : MonoBehaviour {
 
-    [SerializeField] List<Organ> organs; // 9
     [SerializeField] int minDeathOrgans = 2;
     [SerializeField] AudioSource source;
-    enum O { BLADDER, KIDNEY_1, KIDNEY_2, LUNG_1, LUNG_2, HEART, BRAIN, STOMACH, LIVER }
 
     private void Start() {
         GameEvents.current.OnOrganDied += OrganDied;
@@ -32,9 +30,9 @@ public class Game : MonoBehaviour {
     }
 
     private bool CheckIfDead() {
-        if (organs[(int)O.BRAIN].Death || organs[(int)O.HEART].Death || organs[(int)O.LIVER].Death)
+        if (Organs.organs["brain"].Death || Organs.organs["heart"].Death || Organs.organs["liver"].Death)
             return true;
-        if (KidLungNumber((int)O.KIDNEY_1, (int)O.KIDNEY_2) == 0 || KidLungNumber((int)O.LUNG_1, (int)O.LUNG_2) == 0)
+        if (KidLungNumber("kidney1", "kidney2") == 0 || KidLungNumber("lung1", "lung2") == 0)
             return true;
         if (NumberOfDeathOrgans() > minDeathOrgans)
             return true;
@@ -42,16 +40,16 @@ public class Game : MonoBehaviour {
     }
 
     // How many Kidneys or Lungs are alive
-    private int KidLungNumber(int x, int y) {
-        return (!organs[x].Death ? 1 : 0) + (!organs[y].Death ? 1 : 0);
+    private int KidLungNumber(string x, string y) {
+        return (!Organs.organs[x].Death ? 1 : 0) + (!Organs.organs[y].Death ? 1 : 0);
     }
 
     private int NumberOfDeathOrgans() {
-        return organs.Where(x => x.Death).ToList().Count;
+        return Organs.organs.Values.Where(x => x.Death).ToList().Count;
     }
 
     private void SetRateOfDecay() {
-        foreach(Organ or in organs) {
+        foreach(Organ or in Organs.organs.Values) {
             or.decayRate = Random.Range(0.01f, 0.03f);
         }
     }

@@ -8,10 +8,8 @@ public class Controls : MonoBehaviour {
     public Slider bloodCount;
     public Slider bloodToGive;
     int n;
-
-
-
-    public void OnButtonPress() { 
+    
+    public void OnButtonPress() {
         n++;
         Debug.Log("Button clicked " + n + " times.");
     }

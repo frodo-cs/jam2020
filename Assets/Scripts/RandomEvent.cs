@@ -3,15 +3,15 @@ using UnityEngine;
 
 public class RandomEvent : MonoBehaviour {
 
-    [SerializeField] List<Organ> organs;
     [SerializeField] Clock clock;
     [SerializeField] float exponential;
     [SerializeField] float rate;
-
+    List<Organ> list;
     private float min = 1;
 
     private void Start() {
         InvokeRepeating("FireEvent", rate, rate);
+        list = new List<Organ>(Organs.organs.Values);
     }
 
     private void Update() {
@@ -22,7 +22,7 @@ public class RandomEvent : MonoBehaviour {
         int n = Random.Range(0, GetNumber());
         int min = (int)(this.min + (clock.maxTime - clock.time));
         if (n > min) {
-            organs[Random.Range(0, organs.Count)].IncrementDecayRate();
+            list[Random.Range(0, Organs.organs.Values.Count)].IncrementDecayRate();
         }
     }
 
