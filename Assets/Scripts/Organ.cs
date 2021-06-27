@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class Organ : MonoBehaviour {
@@ -6,6 +7,7 @@ public class Organ : MonoBehaviour {
     [SerializeField] Image image;
     [SerializeField] Sprite[] sprites;
 
+    public string organ;
     public int maxHealth = 100;
     public int minHealth = 0;
 
@@ -15,10 +17,20 @@ public class Organ : MonoBehaviour {
     [HideInInspector] public float Health { get; set; }
     [HideInInspector] public bool Death { get; set; }
 
+    private bool dying = false;
+
+    public static event EventHandler<string> OrganDying;
+
     private void Start() {
         image.sprite = sprites[0];
         Health = maxHealth;
         Death = false;
+    }
+
+    public void IncrementDecayRate() {
+        if (!Death) {
+            decayRate += 0.01f;
+        }    
     }
 
     private void Update() {
@@ -28,13 +40,21 @@ public class Organ : MonoBehaviour {
                 image.sprite = sprites[3];
                 Death = true;
                 GameEvents.current.OrganDiedTrigger();
-            } else if (Health < maxHealth / 3) {
+            } else if (Health < maxHealth / 3 && !dying) {
                 image.sprite = sprites[2];
-            } else if (Health < 2 * maxHealth / 3) {
+                dying = true;
+                OnOrganDying(organ);
+            } else if (Health < 2 * maxHealth / 3 && Health >= maxHealth / 3) {
                 image.sprite = sprites[1];
-            } else {
+                dying = false;
+            } else if (Health >= 2 * maxHealth / 3) {
                 image.sprite = sprites[0];
+                dying = false;
             }
         }    
+    }
+
+    protected virtual void OnOrganDying(string name) {
+        OrganDying?.Invoke(this, name);
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 public class Clock : MonoBehaviour {
 
     [SerializeField] TextMeshProUGUI textTime;
-    [SerializeField] int maxTime;
+    public int maxTime;
     [HideInInspector] public float time;
 
     private void Start() {
