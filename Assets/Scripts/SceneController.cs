@@ -7,7 +7,7 @@ public class SceneController : MonoBehaviour
 {
     public string scene;
     public string menu;
-    // Update is called once per frame
+
     void Update()
     {
         if (Input.GetKey("space"))

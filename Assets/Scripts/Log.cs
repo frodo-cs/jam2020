@@ -11,24 +11,25 @@ public class Log : MonoBehaviour {
     void Start() {
         sentences = new List<string>();
         Organ.OrganDying += OrganDyingText;
+        Organ.OrganDied += OrganDiedText;
+        Controls.UnitsSend += UnitsSend;
+    }
+
+    private void OrganDiedText(object sender, KeyValuePair<string, string> pair) {
+        SetText($"{count}: {pair.Value} lost");
     }
 
     private void OrganDyingText(object sender, string name) {
-        SetSentence($"{count} We are losing connection to {name}");    
-        text.text = string.Join("\n", sentences);
-        count++;
+        SetText($"{count}: We are losing connection to {name}");    
     }
 
     private void UnitsSend(object sender, KeyValuePair<int, string> unit) {
-        SetSentence($"{unit.Key} units sent to {unit.Value}");
+        SetText($"{count}: {unit.Key} units sent to {unit.Value}");
+    }
+
+    private void SetText(string sentece) {
+        sentences.Insert(0, sentece);
         text.text = string.Join("\n", sentences);
-    }
-
-    private void SetSentence(string sentece) {
-        sentences.Insert(0, sentece);    
-    }
-
-    void Update() {
-
+        count++;
     }
 }

@@ -11,7 +11,7 @@ public class RandomEvent : MonoBehaviour {
 
     private void Start() {
         InvokeRepeating("FireEvent", rate, rate);
-        list = new List<Organ>(Organs.organs.Values);
+        list = new List<Organ>(Objects.organs.Values);
     }
 
     private void Update() {
@@ -22,8 +22,7 @@ public class RandomEvent : MonoBehaviour {
         int n = Random.Range(0, GetNumber());
         int min = (int)(this.min + (clock.maxTime - clock.time));
         if (n > min) {
-            Debug.LogError("evento");
-            list[Random.Range(0, Organs.organs.Values.Count)].IncrementDecayRate();
+            list[Random.Range(0, Objects.organs.Values.Count)].IncrementDecayRate();
         }
     }
 

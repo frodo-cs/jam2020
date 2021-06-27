@@ -7,9 +7,8 @@ public class StoryController : MonoBehaviour
 {
     public string story;
     public TextMeshProUGUI text;
-
     public string scene;
-    // Start is called before the first frame update
+
     void Start()
     {
         StartCoroutine(Reloj());

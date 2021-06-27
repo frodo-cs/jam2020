@@ -9,7 +9,7 @@ public class HealthBar : MonoBehaviour {
     List<Organ> organs;
 
     void Start() {
-        organs = new List<Organ>(Organs.organs.Values);
+        organs = new List<Organ>(Objects.organs.Values);
     }
 
     void Update() {
