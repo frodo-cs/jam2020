@@ -178,7 +178,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.4188368, g: 0.26486292, b: 0.6037736, a: 0}
+  m_BackGroundColor: {r: 0.08627451, g: 0.09411765, b: 0.13333334, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -874,7 +874,7 @@ MonoBehaviour:
     sentencesList:
     - 'Oh no! We''re losing our person, we have failed protecting their body.
 
-      
+
 
       A
       new objective has arrived from the higher-ups, we have to keep the connections
