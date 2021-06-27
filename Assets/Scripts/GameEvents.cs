@@ -10,7 +10,13 @@ public class GameEvents : MonoBehaviour {
     public event Action OnGameWon;
     public event Action OnOrganDied;
     public event Action OnGameLost;
+    public event Action OnOrganDying;
 
+    public void OrganDyingTrigger() {
+        if(OnOrganDying != null) {
+            OnOrganDying.Invoke();
+        }
+    }
     public void GameWonTrigger() {
         if (OnGameWon != null) {
             OnGameWon.Invoke();
