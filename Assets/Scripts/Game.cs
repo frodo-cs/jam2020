@@ -9,6 +9,8 @@ public class Game : MonoBehaviour {
     [SerializeField] AudioSource source;
 
     private void Start() {
+        Time.timeScale = 1f;
+        PauseMenu.GamePaused = false;
         Organ.OrganDied += OrganDied;
         GameEvents.current.OnGameLost += GameLost;
         GameEvents.current.OnGameWon += GameWon;
@@ -51,7 +53,7 @@ public class Game : MonoBehaviour {
 
     private void SetRateOfDecay() {
         foreach(Organ or in Objects.organs.Values) {
-            or.decayRate = Random.Range(0.001f, 0.01f);
+            or.decayRate = Random.Range(0.01f, 0.05f);
         }
     }
 }

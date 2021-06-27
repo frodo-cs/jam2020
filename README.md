@@ -10,7 +10,10 @@
 "Game Audio - UI SFX" by GameAudio of Freesound.org  
 "bubble sound" by Ranner of Freesound.org  
 "1kHz Loud" by shanedk of Freesound.org   
+"Message Pop Sound" by ImAFoley of Freesound.org
 
 ## Fonts
 "Dogica" by Roberto Mocci 
-"Rainy Hearts" by Camellina  
+"Rainy Hearts" by Camellina   
+"Marlo" by Anna Sergeeva
+   

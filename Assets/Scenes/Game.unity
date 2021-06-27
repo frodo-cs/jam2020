@@ -291,7 +291,7 @@ MonoBehaviour:
   organId: stomach
   maxHealth: 100
   minHealth: 0
-  decayRate: 0.005
+  decayRate: 0.03
 --- !u!114 &129390731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1514,7 +1514,7 @@ MonoBehaviour:
   organId: lung1
   maxHealth: 100
   minHealth: 0
-  decayRate: 0.005
+  decayRate: 0.03
 --- !u!114 &391805610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1963,7 +1963,7 @@ MonoBehaviour:
   organId: heart
   maxHealth: 100
   minHealth: 0
-  decayRate: 0.005
+  decayRate: 0.03
 --- !u!114 &788889068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2760,7 +2760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textTime: {fileID: 1193683984}
-  maxTime: 60
+  maxTime: 30
   time: 0
 --- !u!114 &1193683984
 MonoBehaviour:
@@ -4588,7 +4588,7 @@ MonoBehaviour:
   organId: brain
   maxHealth: 100
   minHealth: 0
-  decayRate: 0.005
+  decayRate: 0.03
 --- !u!114 &1617949247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4728,6 +4728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1661603467}
+  sliderColor: {fileID: 358277142}
 --- !u!1 &1672690906
 GameObject:
   m_ObjectHideFlags: 0
@@ -4788,7 +4789,7 @@ MonoBehaviour:
   organId: lung2
   maxHealth: 100
   minHealth: 0
-  decayRate: 0.005
+  decayRate: 0.03
 --- !u!114 &1672690909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5124,7 +5125,7 @@ MonoBehaviour:
   organId: bladder
   maxHealth: 100
   minHealth: 0
-  decayRate: 0.005
+  decayRate: 0.03
 --- !u!114 &1712201195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5290,7 +5291,7 @@ MonoBehaviour:
   organId: kidney1
   maxHealth: 100
   minHealth: 0
-  decayRate: 0.005
+  decayRate: 0.03
 --- !u!114 &1758734266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5884,7 +5885,7 @@ MonoBehaviour:
   organId: kidney2
   maxHealth: 100
   minHealth: 0
-  decayRate: 0.005
+  decayRate: 0.03
 --- !u!114 &1918620475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5983,7 +5984,7 @@ MonoBehaviour:
   organId: liver
   maxHealth: 100
   minHealth: 0
-  decayRate: 0.005
+  decayRate: 0.03
 --- !u!114 &1967603963
 MonoBehaviour:
   m_ObjectHideFlags: 0

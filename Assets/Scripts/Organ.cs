@@ -13,8 +13,8 @@ public class Organ : MonoBehaviour {
     public int maxHealth = 100;
     public int minHealth = 0;
 
-    [Range(0.001f, 0.01f)]
-    public float decayRate = 0.005f;
+    [Range(0.01f, 0.05f)]
+    public float decayRate = 0.03f;
 
     [HideInInspector] public float Health { get; set; }
     [HideInInspector] public bool Death { get; set; }
@@ -32,7 +32,7 @@ public class Organ : MonoBehaviour {
 
     public void IncrementDecayRate() {
         if (!Death) {
-            decayRate += 0.001f;
+            decayRate += 0.01f;
         }    
     }
 
@@ -54,7 +54,7 @@ public class Organ : MonoBehaviour {
                 image.sprite = sprites[0];
                 dying = false;
             }
-        }    
+        }
     }
 
     protected virtual void OnOrganDying(string name) {

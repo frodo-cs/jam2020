@@ -5,6 +5,10 @@ public class MenuController : MonoBehaviour {
     public string scene;
     public string instructions;
 
+    private void Start() {
+        Time.timeScale = 1f;
+    }
+
     void Update() {
         if (Input.GetKeyUp("space")) {
             SceneManager.LoadScene(scene);

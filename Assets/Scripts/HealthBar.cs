@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour {
 
     [SerializeField] Slider slider;
+    [SerializeField] Image sliderColor;
     List<Organ> organs;
 
     void Start() {
@@ -14,6 +15,7 @@ public class HealthBar : MonoBehaviour {
 
     void Update() {
         slider.value = GetAverage() / GetDeathOrgans();
+        sliderColor.color = Color.Lerp(Color.red, Color.green, slider.value / slider.maxValue);
     }
 
     float GetAverage() {
@@ -21,7 +23,7 @@ public class HealthBar : MonoBehaviour {
     }
 
     int GetDeathOrgans() {
-        return organs.Where(x => x.Death).ToList().Count;
+        return organs.Where(x => x.Death).ToList().Count + 1;
     }
 
 }
