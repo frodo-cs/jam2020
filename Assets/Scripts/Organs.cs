@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-
 public class Organs : MonoBehaviour {
-
     [SerializeField] List<Organ> o; // 9
+
     public static Dictionary<string, Organ> organs;
 
     private void Start() {
